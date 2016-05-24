@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ca1b51a2-d0ba-456d-9318-49fdc8de9d37"
+  name="BricachocPatternModele" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="9accc8ad-2207-435f-a995-7b0a114cf036"
+        name="Vente"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9db72afb-584d-4d3a-81a9-9b8fa18d9af7"
+        name="EtatVente"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="c58d69eb-9375-487b-aed0-bbbd46ea9f1b"
+            isDerived="false"
+            sourceEndRoleName="EtatVente"
+            targetEndRoleName="Vente"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9accc8ad-2207-435f-a995-7b0a114cf036"
+              LastKnownName="Vente"
+              LastKnownLocation="BricachocPatternModele.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9aa8a77a-9a6f-4c41-9fdb-e7ab6e1bc28a"
+                  name="EtatVente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="837c07cf-6a92-4d5e-a01e-850f8931b8ed"
+                  name="Vente"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3a13a36a-faa7-4d4d-8d93-e7b663d82c42"
+        name="VenteEnCours"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="86e156c9-1e4a-49f8-895f-843979fea70a"
+            isSubstitutable="false">
+            <classMoniker
+              Id="9db72afb-584d-4d3a-81a9-9b8fa18d9af7"
+              LastKnownName="EtatVente"
+              LastKnownLocation="BricachocPatternModele.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d43821fd-3841-49a6-afd4-acc7b228e28c"
+        name="VenteEnAttente"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="ca7a1bfa-bc2c-48a8-888c-2ed7e178b308"
+            isSubstitutable="false">
+            <classMoniker
+              Id="9db72afb-584d-4d3a-81a9-9b8fa18d9af7"
+              LastKnownName="EtatVente"
+              LastKnownLocation="BricachocPatternModele.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0c28e5f1-adad-4eb0-808a-c90b0602b7b2"
+        name="VenteTerminee"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="695bc6e3-e2c3-403d-9437-75b3916e03a6"
+            isSubstitutable="false">
+            <classMoniker
+              Id="9db72afb-584d-4d3a-81a9-9b8fa18d9af7"
+              LastKnownName="EtatVente"
+              LastKnownLocation="BricachocPatternModele.uml" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
